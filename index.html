@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sharaf Roofing — Online Presence Audit</title>
+<style>
+:root{--ink:#11161c;--body:#3b4550;--muted:#6c7783;--faint:#98a2ad;--paper:#fff;--ground:#f4f6f8;--panel:#eceff3;
+--rule:#dde2e8;--rule-2:#c2cad4;--slate:#2a3a52;--f:#b3261e;--f-soft:#fbeae9;--d:#b0670a;--d-soft:#fdf1e0;
+--c:#8a7407;--c-soft:#fbf5dd;--a:#1a6444;--a-soft:#e3f0ea;--shadow:0 1px 2px rgba(17,22,28,.05),0 10px 28px -18px rgba(17,22,28,.3);}
+*{box-sizing:border-box}body{margin:0;background:var(--ground);color:var(--ink);font:16px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto;padding:0 24px 84px}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600}p{margin:0 0 14px}
+.mast{padding:50px 0 0}.eyebrow{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);font-weight:700}
+h1{font-size:clamp(31px,5.2vw,48px);line-height:1.07;margin:13px 0 0;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:17px;margin:14px 0 0;max-width:62ch}
+.meta{display:flex;flex-wrap:wrap;gap:6px 22px;margin-top:19px;font-size:12.5px;color:var(--faint)}.meta b{color:var(--body);font-weight:600}
+.grade{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center;background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:26px 28px;margin:28px 0 0;box-shadow:var(--shadow)}
+@media(max-width:600px){.grade{grid-template-columns:1fr;gap:16px}}
+.badge{width:116px;height:116px;border-radius:6px;background:var(--d-soft);border:2px solid var(--d);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--d)}
+.badge .g{font-family:Georgia,serif;font-size:52px;line-height:1;font-weight:700}.badge .s{font-size:12px;letter-spacing:.06em;margin-top:5px;font-weight:700}
+.grade h2{margin:0 0 8px;font-size:22px}.grade p{margin:0;color:var(--body);font-size:15px}
+.finds{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;margin:22px 0 0;overflow:hidden}
+.find{background:var(--paper);padding:18px}.find .n{font-family:Georgia,serif;font-size:29px;line-height:1.1;color:var(--f);font-weight:700}
+.find .n.ok{color:var(--a)}.find .l{font-size:13px;color:var(--body);margin-top:8px;line-height:1.45}
+section{margin-top:50px}.sec-h{border-top:2px solid var(--ink);padding-top:12px;margin-bottom:6px}h2.sec{font-size:clamp(21px,3vw,27px);margin:0}
+.lede{color:var(--muted);font-size:16px;margin:8px 0 20px;max-width:66ch}
+.shot{background:#1b2028;border-radius:6px;padding:20px 22px;margin:18px 0;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13.5px;color:#dfe5ec;line-height:1.85;overflow-x:auto}
+.shot .lbl{font-family:-apple-system,sans-serif;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:#7d8894;font-weight:700;margin-bottom:11px;display:block}
+.shot .ph{background:#4a1f1c;color:#ff9d94;padding:2px 7px;border-radius:3px;font-weight:600}
+.tw{overflow-x:auto;border:1px solid var(--rule);border-radius:6px;background:var(--paper);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:650px;font-size:14.5px}
+th{background:var(--panel);text-align:left;padding:11px 14px;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1px solid var(--rule-2)}
+td{padding:13px 14px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}tbody tr:last-child td{border-bottom:none}
+td.cat{font-weight:600;width:22%}td.sc{width:70px;white-space:nowrap;font-weight:700;font-variant-numeric:tabular-nums}
+.pill{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:3px}
+.p-f{background:var(--f-soft);color:var(--f)}.p-d{background:var(--d-soft);color:var(--d)}.p-c{background:var(--c-soft);color:var(--c)}.p-a{background:var(--a-soft);color:var(--a)}
+.call{background:var(--paper);border:1px solid var(--rule);border-left:4px solid var(--f);border-radius:0 6px 6px 0;padding:20px 22px;margin:22px 0;box-shadow:var(--shadow)}
+.call.good{border-left-color:var(--a)}.call.slate{border-left-color:var(--slate)}
+.call-l{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--f);display:block;margin-bottom:8px}
+.call.good .call-l{color:var(--a)}.call.slate .call-l{color:var(--slate)}.call p:last-child{margin-bottom:0}
+code{background:var(--panel);padding:1.5px 6px;border-radius:3px;font-size:13px;font-family:ui-monospace,Consolas,monospace;color:var(--slate)}
+ul{margin:0 0 16px;padding-left:22px}li{margin-bottom:9px}strong{font-weight:650}
+.pri{counter-reset:p;margin:20px 0 0;padding:0;list-style:none}
+.pri li{counter-increment:p;position:relative;padding:16px 18px 16px 58px;background:var(--paper);border:1px solid var(--rule);border-radius:6px;margin-bottom:10px;box-shadow:var(--shadow)}
+.pri li::before{content:counter(p);position:absolute;left:17px;top:16px;width:26px;height:26px;background:var(--slate);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;font-family:-apple-system,sans-serif}
+.pri h4{margin:0 0 5px;font-size:16px;font-family:Georgia,serif}.pri p{margin:0;font-size:14px;color:var(--body)}
+footer{margin-top:58px;padding-top:20px;border-top:2px solid var(--ink);font-size:12.5px;color:var(--faint);line-height:1.75}
+</style></head><body><div class="wrap">
+
+<header class="mast">
+  <div class="eyebrow">Online Presence Audit &middot; Prepared 21 August 2026</div>
+  <h1>Sharaf Roofing</h1>
+  <p class="sub">You get most of your work through word of mouth and you want more qualified
+  enquiries. This is a review of what happens when someone your customer recommends you to goes and
+  looks you up first, which almost all of them do.</p>
+  <div class="meta"><span><b>Prepared for</b> Ahmed Abdelaziz</span><span><b>Wembley, London</b></span>
+  <span><b>Reviewed</b> sharafroofing.co.uk</span><span><b>By</b> AG1 Consulting</span></div>
+</header>
+
+<div class="grade">
+  <div class="badge"><div class="g">D</div><div class="s">34 / 100</div></div>
+  <div>
+    <h2>It looks fine at a glance. That is exactly the problem.</h2>
+    <p>The site is tidy, loads properly and has a working phone link. It also carries stock
+    photographs of other people's roofs, a trade badge belonging to a paving company, a spelling
+    mistake in a section heading, a copyright notice three years out of date, and no analytics of any
+    kind. <strong>None of that is visible in a glance. All of it is visible to someone deciding
+    whether to trust you with a roof.</strong></p>
+  </div>
+</div>
+
+<div class="finds">
+  <div class="find"><div class="n">2</div><div class="l">Stock photographs on a roofing website, licensed from Adobe Stock rather than taken on your jobs</div></div>
+  <div class="find"><div class="n">2023</div><div class="l">The copyright year in your footer, and the last time anything was added to the site</div></div>
+  <div class="find"><div class="n">0</div><div class="l">Analytics or tracking of any kind. No Google Analytics, no tag manager, no pixel</div></div>
+  <div class="find"><div class="n ok">5</div><div class="l">Genuine job photographs already on your site, taken on your own phone. Use these instead</div></div>
+</div>
+
+<section>
+  <div class="sec-h"><h2 class="sec">Three things that undermine word of mouth</h2></div>
+  <p class="lede">Word of mouth gets someone to your website. These are what they find when they check
+  you out.</p>
+
+  <div class="call">
+    <span class="call-l">One: the trade badge belongs to a paving company</span>
+    <p>The TrustATrader badge on your site is served from this file:</p>
+    <div class="shot"><span class="lbl">sharafroofing.co.uk &middot; page source</span>
+    /wp-content/uploads/2023/03/<span class="ph">Trustatrader-Paving-Company.png</span></div>
+    <p>It is a generic badge image made for a paving business. It does not link to your profile and it
+    carries no rating or review count. A homeowner who notices reads it as decoration rather than
+    accreditation, and TrustATrader themselves are unlikely to be pleased about it.</p>
+  </div>
+
+  <div class="call">
+    <span class="call-l">Two: the photographs are not your roofs</span>
+    <p>Two of the images on your site are licensed stock photography, filed as
+    <code>AdobeStock_235305251</code> and <code>AdobeStock_387619937</code>. Other roofers in London
+    can and do buy the identical pictures.</p>
+    <p><strong>The frustrating part is that you do not need them.</strong> You already have five real
+    job photographs on the site, taken on a phone and sent over WhatsApp. Those are worth far more
+    than the stock, because they are provably yours.</p>
+  </div>
+
+  <div class="call">
+    <span class="call-l">Three: a spelling mistake in a section heading</span>
+    <p>One of your service headings reads <strong>"Installing Flat Foofs"</strong>. It is not buried
+    in body copy, it is a heading. Small, but for a customer weighing up a five-figure roof it feeds
+    the doubt they were already carrying.</p>
+  </div>
+</section>
+
+<section>
+  <div class="sec-h"><h2 class="sec">The scorecard</h2></div>
+  <div class="tw"><table>
+    <thead><tr><th>Category</th><th>Score</th><th>Grade</th><th>What we found</th></tr></thead><tbody>
+    <tr><td class="cat">Contact accessibility</td><td class="sc">6/10</td><td><span class="pill p-c">C</span></td>
+    <td>Mobile number present as a working tap-to-call link, and a matching business email. No landline and no address beyond Wembley, which both cost credibility on larger jobs.</td></tr>
+    <tr><td class="cat">Photography</td><td class="sc">3/10</td><td><span class="pill p-d">D</span></td>
+    <td>Two Adobe Stock images used as primary imagery. Five genuine job photographs exist on the site but are given less prominence than the stock.</td></tr>
+    <tr><td class="cat">Trust signals</td><td class="sc">2/10</td><td><span class="pill p-f">F</span></td>
+    <td>TrustATrader badge is a generic paving-company graphic with no link, no rating and no review count. No insurance figure, no company number, no registered address.</td></tr>
+    <tr><td class="cat">Reviews on site</td><td class="sc">0/10</td><td><span class="pill p-f">F</span></td>
+    <td>No testimonials, ratings or review counts anywhere. You have positive reviews published elsewhere and a visitor to your own site sees none of them.</td></tr>
+    <tr><td class="cat">Measurement</td><td class="sc">0/10</td><td><span class="pill p-f">F</span></td>
+    <td>No Google Analytics, no tag manager, no Meta pixel. Nothing on the site is being measured, so there is no way to know how many people visit or where enquiries come from.</td></tr>
+    <tr><td class="cat">Enquiry capture</td><td class="sc">3/10</td><td><span class="pill p-d">D</span></td>
+    <td>Two forms, both collecting name, email and message only. No phone field, no job type, no postcode, no urgency, so every enquiry needs a full qualifying conversation afterwards.</td></tr>
+    <tr><td class="cat">Copy quality</td><td class="sc">3/10</td><td><span class="pill p-d">D</span></td>
+    <td>"Installing Flat Foofs" as a section heading. The lead copy — "A roof is more than just a shelter" — is generic and could belong to any roofer anywhere.</td></tr>
+    <tr><td class="cat">Proof of claims</td><td class="sc">2/10</td><td><span class="pill p-f">F</span></td>
+    <td>The "Six Reasons For People Choosing Us" are Quality Material, 100% Satisfaction, Well Trained Staff, Time Availability, Quick Response and Warranty. All six are unverifiable assertions that every competitor also makes. None carries a number, a name or a guarantee term.</td></tr>
+    <tr><td class="cat">Service depth</td><td class="sc">6/10</td><td><span class="pill p-c">C</span></td>
+    <td><strong>Genuinely decent.</strong> Six service areas covering new roofs, repairs, gutters, skylights, fibreglass and flat roofs, with real detail on chimney flashing, lead valley repairs, slating and tiling. Better than most.</td></tr>
+    <tr><td class="cat">Freshness</td><td class="sc">2/10</td><td><span class="pill p-f">F</span></td>
+    <td>Copyright reads 2023 and the newest content on the site dates from mid-2023. Three years with nothing added.</td></tr>
+    <tr><td class="cat">Local search</td><td class="sc">3/10</td><td><span class="pill p-d">D</span></td>
+    <td>No areas covered listed anywhere, and no area pages. For a Wembley roofer competing across north-west London, this is a large amount of free ground left unclaimed.</td></tr>
+    <tr><td class="cat">Commercial positioning</td><td class="sc">4/10</td><td><span class="pill p-d">D</span></td>
+    <td>The headline says "Commercial And Residential Roofing Experts" but there is no commercial page, no commercial examples and no separate enquiry route.</td></tr>
+  </tbody></table></div>
+</section>
+
+<section>
+  <div class="sec-h"><h2 class="sec">Why this matters for a word-of-mouth business specifically</h2></div>
+  <div class="call slate">
+    <span class="call-l">The mechanism</span>
+    <p>When a customer recommends you, the person they recommended you to almost always searches your
+    name before they ring. That search is the moment the referral either converts or quietly dies.</p>
+    <p>Right now that person lands on a site with stock photos, a paving badge, a typo and no reviews.
+    <strong>The referral did its job and the website undid it.</strong> You will never hear about the
+    ones you lose this way, which is exactly why it goes unfixed for three years.</p>
+    <p>Fixing it does not just help advertising. It raises the conversion rate of every referral you
+    already get, for free, permanently.</p>
+  </div>
+  <p>And on qualified enquiries specifically: your forms ask for a message and nothing else. If you
+  want better-qualified leads, the fastest route is to ask better questions on the form &mdash; job
+  type, property, postcode, timescale &mdash; so you can tell a five-figure re-roof from a gutter
+  clean before you spend an hour on it.</p>
+</section>
+
+<section>
+  <div class="sec-h"><h2 class="sec">Priority order</h2></div>
+  <ol class="pri">
+    <li><h4>Remove the paving badge</h4><p>Either link a real TrustATrader profile with your live rating and review count, or take the graphic down. A badge that is not yours is worse than no badge.</p></li>
+    <li><h4>Replace the stock photographs with your own</h4><p>You already have five real job photos. Put them front and centre and delete the Adobe Stock images. This costs nothing and is the single biggest credibility gain available.</p></li>
+    <li><h4>Put your reviews on your own website</h4><p>Rating, count and two or three full quotes with customer names, near the top of the page rather than nowhere at all.</p></li>
+    <li><h4>Fix "Foofs" and refresh the year</h4><p>Ten minutes. A live 2023 copyright tells every visitor the business may not still be trading.</p></li>
+    <li><h4>Rebuild the enquiry forms to qualify</h4><p>Phone, job type, property type, postcode and timescale. This is what turns enquiries into qualified enquiries.</p></li>
+    <li><h4>Install analytics before spending anything on marketing</h4><p>You currently cannot measure a single visit. Any money spent on advertising before this is unmeasurable by definition.</p></li>
+  </ol>
+</section>
+
+<footer>
+  Prepared by AG1 Consulting, 21 August 2026, for Ahmed Abdelaziz of Sharaf Roofing, Wembley, London.<br>
+  Findings taken directly from sharafroofing.co.uk and its page source on that date. Image filenames
+  and the absence of tracking scripts were read from the live page source. Reviews published on
+  third-party platforms have not been independently verified.
+</footer>
+</div></body></html>
